@@ -27,7 +27,7 @@ SECRET_KEY = 'd@jz8&e6e!gu@o6sw@8_c=i*^ep9$0r$!1oie*s8$kh(hsr&u3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.205']
+ALLOWED_HOSTS = ['192.168.56.200']
 
 # Application definition
 
@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'serverweb',
         'USER': 'serverweb',
         'PASSWORD': 'serverweb',
-        'HOST': '192.168.0.204',
+        'HOST': '192.168.56.101',
         'PORT': '3306',
     }
 }

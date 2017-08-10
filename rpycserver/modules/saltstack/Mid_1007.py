@@ -10,6 +10,9 @@ class Modulehandle():
         self.sys_param_array= sys_param_row
         self.hosts=target_host(hosts,"HN").split(";")
 
+    def __str__(self):
+        return "HOST:" + ','.join(self.hosts) + " Action:" + str(self.moduleid)
+
     def run(self):
         try:
 
@@ -33,6 +36,6 @@ class Modulehandle():
 
             if len(self.Runresult) == 0:
                 return "No hosts found,请确认主机已经添加saltstack环境！"
-        except Exception,e:
+        except Exception as e:
             return str(e)
         return self.Runresult

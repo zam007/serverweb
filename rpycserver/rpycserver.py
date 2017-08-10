@@ -13,8 +13,6 @@ from config import *
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # 将选用的模块方式加载到环境变量.
 sys.path.append(os.sep.join((BASE_DIR, 'modules/' + AUTO_PLATFORM)))
-print(sys.path)
-
 
 
 class ManagerService(Service):

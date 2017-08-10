@@ -180,7 +180,7 @@ def module_run(request):
     put_string += Sys_param_2 + "@@"
     try:
         # conn = rpyc.connect('192.168.0.205', 11511)
-        conn = rpyc.connect('118.190.68.4', 11511)
+        conn = rpyc.connect('192.168.56.200', 11511)
         conn.root.login('OMuser', 'KJS23o4ij09gHF734iuhsdfhkGYSihoiwhj38u4h')
     except Exception as e:
         logging.error('connect rpyc server error:' + str(e))

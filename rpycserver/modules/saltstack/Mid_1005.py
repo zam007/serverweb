@@ -11,6 +11,9 @@ class Modulehandle():
         self.sys_param_array= sys_param_row
         self.hosts=target_host(hosts,"HN").split(";")
 
+    def __str__(self):
+        return "HOST:" + ','.join(self.hosts) + " Action:" + str(self.moduleid)
+
     def run(self):
         try:
             client = salt.client.LocalClient()
@@ -64,6 +67,6 @@ class Modulehandle():
                 return "No hosts found,请确认主机已经添加saltstack环境！"
 
             self.Runresult  = client.cmd(self.hosts,'cmd.run',[hx],expr_form='list')
-        except Exception,e:
+        except Exception as e:
             return str(e)
         return self.Runresult
